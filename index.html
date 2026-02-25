@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimePower Responsive Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+   <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+            <span><i class="fa-solid fa-envelope"></i> info@primpowercleaning.in</span>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+           <a href="index.html"> <img src="logo.png" alt="Logo"></a>
+        </div>
+
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge">0</span>
+            </div>
+            <a href="#" class="brochure-btn">
+                <i class="fa-solid fa-download"></i> <span>Brochure</span>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+  
+      
+    
+
+
+    <section class="hero-slider">
+    <div class="slider-container" id="slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('banner1.png');">
+            <div class="hero-content">
+                <h1>Professional Cleaning Solutions</h1>
+                <p>Industrial & Commercial Cleaning Equipment for Every Need</p>
+                <a href="#" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('banner3.png');">
+            <div class="hero-content">
+                <h1></h1>
+                <p></p>
+                <a href="#" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('banner2.png');">
+            <div class="hero-content">
+                <h1>Advanced Equipment</h1>
+                <p></p>
+                <a href="#" class="shop-btn">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+    <div class="dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Infinite Product Scroll -->
+   <section class="bg-white py-8 border-y border-gray-200">
+    <div class="scroll-container">
+     <div class="scroll-content"><!-- Product Items (Duplicated for infinite scroll) -->
+      <div class="inline-flex items-center gap-8 px-4">
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="machine 1.png" alt="Scrubber Dryer" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">machine 1</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="machine 2.png" alt="Pressure Washer" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">Machine 2</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="250ml.png" alt="Vacuum Cleaner" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">250ml</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="1000ml.png" alt="Floor Polisher" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">1000ml</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="500ml.png" alt="Cleaning Chemicals" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">500ml</span>
+       </div>
+      </div><!-- Duplicate for seamless loop -->
+      <div class="inline-flex items-center gap-8 px-4">
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="machine 3.png" alt="Scrubber Dryer" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">Machine 3</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="250 1000 combo.png" alt="Pressure Washer" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">combo
+        </span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="machine 1.png" alt="Vacuum Cleaner" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">Machine 1</span>
+       </div>
+       <div class="flex items-center gap-3 bg-gray-50 px-6 py-3 rounded-full">
+        <div class="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center"><img src="500ml.png" alt="Floor Polisher" class="w-full h-full object-cover rounded-lg"  onerror="this.style.display='none'">
+         <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+         </svg>
+        </div><span class="font-semibold text-gray-700">500ml</span>
+       </div>
+       </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+
+
+   
+    <!-- Who We Are Section -->
+<section id="about" class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Left Content -->
+      <div>
+        <span class="text-red-500 font-semibold tracking-wider uppercase">
+          Who We Are
+        </span>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">
+              Our Partnership with Matrix Cleaning Systems
+        </h2>
+
+        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+      
+<b>DEMO TEXT</b>Since 2015, PrimPower has been a proud authorized distributor of Matrix Cleaning Systems equipment. This strategic partnership has allowed us to offer our clients access to some of the most innovative and reliable cleaning machines available in the market.
+
+Matrix Cleaning Systems is renowned for their cutting-edge technology and robust engineering. We've built our foundation on distributing their high-performance equipment, which has earned the trust of professional cleaning operations across the UK. From their industrial floor scrubbers to advanced pressure washers, Matrix machines are synonymous with reliability and efficiency.
+
+
+        </p>
+
+        <p class="text-gray-600 mb-8">
+          Our mission is simple — deliver powerful cleaning solutions that improve 
+          efficiency, safety, and long-term performance for our clients.
+        </p>
+
+        <a href="about us.html" 
+           class="inline-block btn-secondary text-white px-8 py-3 rounded-full font-semibold transition">
+          View More →
+        </a>
+      </div>
+
+      <!-- Right Image -->
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="matrix logo.jpg" 
+               alt="Industrial Cleaning Equipment" 
+               class="w-full h-full object-cover">
+        </div>
+
+        <!-- Decorative Element -->
+        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-red-500 rounded-2xl opacity-20"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+
+
+
+
+
+<section class="category-section">
+    <div class="container">
+        <h2 class="section-title">OUR RANGE</h2>
+        
+        <div class="category-grid">
+            <div class="featured-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('250\ 1000\ combo.png');">
+                <div class="featured-content">
+                    <ul>
+                       
+                    </ul>
+                    <a href="#" class="view-all-btn">View All</a>
+                </div>
+            </div>
+
+            <div class="sub-grid">
+                <div class="category-item">
+                    <img src="250ml.png" >
+                    <div class="item-text">
+                        <h3>250ML</h3>
+                        <p>NET DIAMETE - 23MM</p>
+                        <p>STANDARD WEIGHT - 28GM</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="500ml.png">
+                    <div class="item-text">
+                     <h3>500ML</h3>
+                        <p>NET DIAMETE - 23MM</p>
+                        <p>STANDARD WEIGHT - 43GM</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="1000ml.png">
+                    <div class="item-text">
+                        <h3>250ML</h3>
+                        <p>NET DIAMETE - 23MM</p>
+                        <p>STANDARD WEIGHT - 66GM</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="250 1000 combo.png">
+                    <div class="item-text">
+                        <h3>250ML 1000ML</h3>
+                        <p>NET DIAMETE- 23MM + 23MM</p>
+                        <p>STANDARD WEIGHT - 28GM + 66GM</p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="machine 1.png">
+                    <div class="item-text">
+                        <h3>Machine 1</h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <img src="machine 2.png">
+                    <div class="item-text">
+                        <h3>Machine 2</h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="shop-by-category">
+    <div class="container">
+        <h2 class="category-main-title">Shop By <span>Category</span></h2>
+        
+        <div class="category-row">
+            <div class="cat-card reveal-up">
+                <div class="cat-image">
+                    <img src="500ml.png" alt="Category 1">
+                </div>
+                <div class="cat-info">
+                    <h3>Surf Excel Liquid</h3>
+                    <p>Effortless stain removal in a convenient liquid form. Perfect for busy households.</p>
+                </div>
+            </div>
+
+            <div class="cat-card reveal-up">
+                <div class="cat-image">
+                    <img src="machine 1.png" alt="Category 2">
+                </div>
+                <div class="cat-info">
+                    <h3>Surf Excel Easy Wash</h3>
+                    <p>Specially formulated for quick dissolution and minimal effort. Ideal for hand washing.</p>
+                </div>
+            </div>
+
+            <div class="cat-card reveal-up">
+                <div class="cat-image">
+                    <img src="1000ml.png" alt="Category 3">
+                </div>
+                <div class="cat-info">
+                    <h3>Surf Excel Powder</h3>
+                    <p>Traditional powerful cleaning in versatile powder form. Tackles tough stains effectively.</p>
+                </div>
+            </div>
+
+            <div class="cat-card reveal-up">
+                <div class="cat-image">
+                    <img src="machine 2.png" alt="Category 4">
+                </div>
+                <div class="cat-info">
+                    <h3>Surf Excel Matic</h3>
+                    <p>Designed specifically for top and front load machines for a superior clean.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="why-choose-us">
+    <div class="container">
+        <div class="section-header">
+            <span>Our Excellence</span>
+            <h2>Why Choose PrimePower</h2>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item reveal-feature">
+                <div class="image-wrapper">
+                    <img src="whychoose1.png" alt="Quality Products">
+                </div>
+                <h3>Toilet</h3>
+                <p>Harpic provides effective solutions for all your toilet-related problems and questions.</p>
+            </div>
+
+            <div class="feature-item reveal-feature">
+                <div class="image-wrapper">
+                    <img src="whychoose2.png" alt="Expert Support">
+                </div>
+                <h3>Bathroom</h3>
+                <p>Harpic helps you solve any bathroom cleaning challenges and concerns.</p>
+            </div>
+
+            <div class="feature-item reveal-feature">
+                <div class="image-wrapper">
+                    <img src="whychoose3.png" alt="Global Standards">
+                </div>
+                <h3>Your problems</h3>
+                <p>Dealing with specific issues like mould or limescale? Harpic offers the right solutions to tackle them with ease.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Industries We Serve -->
+   <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+     <div class="text-center mb-12"><span class="text-orange-500 font-semibold tracking-wider uppercase">Industries</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Industries We Serve</h2>
+     </div>
+     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        🏥
+       </div>
+       <p class="font-semibold text-gray-700">Healthcare</p>
+      </div>
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        🏭
+       </div>
+       <p class="font-semibold text-gray-700">Manufacturing</p>
+      </div>
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        🏨
+       </div>
+       <p class="font-semibold text-gray-700">Hospitality</p>
+      </div>
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        🛒
+       </div>
+       <p class="font-semibold text-gray-700">Retail</p>
+      </div>
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        🎓
+       </div>
+       <p class="font-semibold text-gray-700">Education</p>
+      </div>
+      <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-red-50 transition-colors cursor-pointer">
+       <div class="text-4xl mb-3">
+        ✈️
+       </div>
+       <p class="font-semibold text-gray-700">Airports</p>
+      </div>
+     </div>
+    </div>
+   </section>
+
+
+
+
+
+
+
+<section class="our-work">
+    <div class="container">
+        <div class="section-title-area">
+            <h2>Our <span>Work</span></h2>
+            <p>Download our latest project reports, case studies, and technical documentations.</p>
+        </div>
+
+        <div class="work-grid">
+            <div class="work-card">
+                <div class="file-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="work-info">
+                    <h3>Project Report 2025</h3>
+                    <p>Detailed analysis of our industrial cleaning implementation at TechPark.</p>
+                    <div class="work-actions">
+                        <a href="Indian Rail letter 190209.pdf" target="_blank" class="work-btn view">View PDF</a>
+                        <a href="RML Order.pdf" download class="work-btn download"><i class="fa-solid fa-cloud-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="file-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="work-info">
+                    <h3>Case Study: Hotel Hygiene</h3>
+                    <p>How PrimePower systems improved efficiency by 40% for Grand Plaza.</p>
+                    <div class="work-actions">
+                        <a href="Railway Hospital final letter.pdf" target="_blank" class="work-btn view">View PDF</a>
+                        <a href="RMLTender.pdf" download class="work-btn download"><i class="fa-solid fa-cloud-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <div class="file-icon">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <div class="work-info">
+                    <h3>Safety Certifications</h3>
+                    <p>Global safety standards and compliance documents for our equipment.</p>
+                    <div class="work-actions">
+                        <a href="your-file-3.pdf" target="_blank" class="work-btn view">View PDF</a>
+                        <a href="your-file-3.pdf" download class="work-btn download"><i class="fa-solid fa-cloud-arrow-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+           <a href="index.html"> <img src="logo.png" alt="Logo" class="footer-logo"></a>
+            <p class="footer-desc">
+                Leading provider of industrial and commercial cleaning solutions. Committed to excellence and global standards in every product.
+            </p>
+            <div class="footer-socials">
+                <a href="#" class="social-icon fb"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon ig"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/919876543210" class="social-icon wa"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Our Categories</h3>
+            <ul>
+                <li><a href="#">Industrial Cleaning</a></li>
+                <li><a href="#">Commercial Gear</a></li>
+                <li><a href="#">Housekeeping Tools</a></li>
+                <li><a href="#">Safety Equipment</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>123 Industrial Area, Phase II,<br>New Delhi, India</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@primpowercleaning.in</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; Copyright © 2026 primepower.in All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+   
+    <script>
+         function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+
+
+
+
+
+
+        let currentIdx = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        if (index >= slides.length) currentIdx = 0;
+        if (index < 0) currentIdx = slides.length - 1;
+
+        slides[currentIdx].classList.add('active');
+        dots[currentIdx].classList.add('active');
+    }
+
+    function changeSlide(n) {
+        currentIdx += n;
+        showSlide(currentIdx);
+    }
+
+    function currentSlide(n) {
+        currentIdx = n;
+        showSlide(currentIdx);
+    }
+
+    // Auto switch every 4 seconds
+    setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+
+
+
+
+
+    // Intersection Observer to trigger animation when cards enter view
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Add a small delay for each card for a "staggered" effect
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 150); 
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-card').forEach(card => {
+        observer.observe(card);
+    });
+
+
+// Reveal animation on scroll
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Staggered delay for each of the 4 columns
+                setTimeout(() => {
+                    entry.target.classList.add('active');
+                }, index * 100);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-up').forEach(el => scrollObserver.observe(el));
+
+
+
+    // Simple Scroll Animation
+    const featureObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-feature').forEach((el) => featureObserver.observe(el));
+
+    </script>
+
+</body>
+</html>
